@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Penis Code Selector - Men</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  :root {
+    --primary-blue: #3B82F6;
+    --primary-purple: #8B5CF6;
+    --highlight-green: #86EFAC;
+    --bg-white: #FFFFFF;
+  }
+  body {
+    background-color: var(--bg-white);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+  .gradient-text {
+    background: linear-gradient(90deg, var(--primary-blue), var(--primary-purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .gradient-bg {
+    background: linear-gradient(135deg, var(--primary-blue), var(--primary-purple));
+  }
+  .gradient-border {
+    position: relative;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+  }
+  .gradient-border::before {
+    content: '';
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    z-index: -1;
+    margin: -2px;
+    border-radius: inherit;
+    background: linear-gradient(135deg, var(--primary-blue), var(--primary-purple));
+  }
+  .custom-checkbox:checked, .custom-radio:checked {
+    background-color: var(--primary-purple);
+    border-color: var(--primary-purple);
+  }
+  .selected-card {
+    background-color: var(--highlight-green);
+    border-color: #22C55E;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(134, 239, 172, 0.4);
+  }
+  .smooth-transition {
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .btn-primary {
+    background: linear-gradient(135deg, var(--primary-blue), var(--primary-purple));
+    color: white;
+    transition: all 0.3s ease;
+  }
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(59, 130, 246, 0.35);
+  }
+  .btn-secondary {
+    background: #F3F4F6;
+    color: #374151;
+  }
+  .btn-secondary:hover {
+    background: #E5E7EB;
+  }
+  .pulse-dot {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: .4; }
+  }
+  .fade-in {
+    animation: fadeIn 0.3s ease-in;
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(4px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  input[type="radio"], input[type="checkbox"] {
+    cursor: pointer;
+  }
+</style>
+</head>
+<body class="bg-white text-gray-800 min-h-screen">
+  <div class="max-w-7xl mx-auto p-4 sm:p-6 lg:p-8">
+    <!-- Header -->
+    <header class="mb-8 text-center">
+      <div class="inline-flex items-center gap-2 mb-3">
+        <span class="relative flex h-3 w-3">
+          <span class="pulse-dot absolute inline-flex h-full w-full rounded-full bg-purple-400 opacity-75"></span>
+          <span class="relative inline-flex rounded-full h-3 w-3 bg-purple-500"></span>
+        </span>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold gradient-text">Penis Configuration Selector</h1>
+      </div>
+      <p class="text-gray-600 max-w-2xl mx-auto text-sm sm:text-base">
+        Interactive reference tool based on the document "Detailed Analysis of the Ultimate Best Penis and Vagina Fit for Women". 
+        <span class="font-medium">This version is specifically for men and focuses only on penis characteristics and related codes.</span>
+      </p>
+      <div class="mt-4 inline-block px-4 py-2 bg-amber-50 border border-amber-200 rounded-lg">
+        <p class="text-xs text-amber-800">
+          <strong>Disclaimer:</strong> For educational reference only. Codes and descriptions derived from provided document.
+        </p>
+      </div>
+    </header>
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+      <!-- Main Controls Column -->
+      <div class="lg:col-span-2 space-y-6">
+        
+        <!-- 1. Tightness Section -->
+        <section class="bg-white rounded-xl shadow-md border border-gray-100 p-5 sm:p-6 smooth-transition hover:shadow-lg">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-lg gradient-bg flex items-center justify-center text-white font-bold">1</div>
+            <h2 class="text-xl font-bold text-gray-800">Tightness</h2>
+          </div>
+          <div id="tightness-container" class="space-y-2">
+            <label class="flex items-center gap-3 p-4 rounded-lg border-2 border-gray-200 cursor-pointer smooth-transition hover:border-purple-300 code-option" data-code="7648287418" data-name="Penis Tight">
+              <input type="radio" name="tightness" value="7648287418" class="custom-radio w-5 h-5 text-purple-600 focus:ring-purple-500">
+              <div class="flex-1">
+                <div class="font-semibold text-gray-800">Penis Tight</div>
+                <div class="text-xs text-gray-500 font-mono">Code: 7648287418</div>
+              </div>
+            </label>
+          </div>
+        </section>
+
+        <!-- 2. Throbbing Controls -->
+        <section class="bg-white rounded-xl shadow-md border border-gray-100 p-5 sm:p-6 smooth-transition hover:shadow-lg">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-lg gradient-bg flex items-center justify-center text-white font-bold">2</div>
+            <h2 class="text-xl font-bold text-gray-800">Throbbing Controls</h2>
+          </div>
+          <div id="throbbing-container" class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <label class="flex items-start gap-3 p-4 rounded-lg border-2 border-gray-200 cursor-pointer smooth-transition hover:border-purple-300 code-option" data-code="768938521" data-name="Penis Tight Throbbing">
+              <input type="checkbox" class="custom-checkbox mt-1 w-5 h-5 rounded text-purple-600 focus:ring-purple-500" value="768938521">
+              <div class="flex-1">
+                <div class="font-semibold text-gray-800">Penis Tight Throbbing</div>
+                <div class="text-xs text-gray-500 font-mono">768938521</div>
+              </div>
+            </label>
+            <label class="flex items-start gap-3 p-4 rounded-lg border-2 border-gray-200 cursor-pointer smooth-transition hover:border-purple-300 code-option" data-code="7677489827" data-name="Penis Throb Hard">
+              <input type="checkbox" class="custom-checkbox mt-1 w-5 h-5 rounded text-purple-600 focus:ring-purple-500" value="7677489827">
+              <div class="flex-1">
+                <div class="font-semibold text-gray-800">Penis Throb Hard</div>
+                <div class="text-xs text-gray-500 font-mono">7677489827</div>
+              </div>
+            </label>
+            <label class="flex items-start gap-3 p-4 rounded-lg border-2 border-gray-200 cursor-pointer smooth-transition hover:border-purple-300 code-option" data-code="7671386274" data-name="Penis Throb Hard Fast">
+              <input type="checkbox" class="custom-checkbox mt-1 w-5 h-5 rounded text-purple-600 focus:ring-purple-500" value="7671386274">
+              <div class="flex-1">
+                <div class="font-semibold text-gray-800">Penis Throb Hard Fast</div>
+                <div class="text-xs text-gray-500 font-mono">7671386274</div>
+              </div>
+            </label>
+            <label class="flex items-start gap-3 p-4 rounded-lg border-2 border-gray-200 cursor-pointer smooth-transition hover:border-purple-300 code-option" data-code="7678584810" data-name="Penis Throb in Pussy">
+              <input type="checkbox" class="custom-checkbox mt-1 w-5 h-5 rounded text-purple-600 focus:ring-purple-500" value="7678584810">
+              <div class="flex-1">
+                <div class="font-semibold text-gray-800">Penis Throb in Pussy</div>
+                <div class="text-xs text-gray-500 font-mono">7678584810</div>
+              </div>
+            </label>
+            <label class="flex items-start gap-3 p-4 rounded-lg border-2 border-gray-200 cursor-pointer smooth-transition hover:border-purple-300 code-option" data-code="76779838687" data-name="Penis Throb in Pussy Hard">
+              <input type="checkbox" class="custom-checkbox mt-1 w-5 h-5 rounded text-purple-600 focus:ring-purple-500" value="76779838687">
+              <div class="flex-1">
+                <div class="font-semibold text-gray-800">Penis Throb in Pussy Hard</div>
+                <div class="text-xs text-gray-500 font-mono">76779838687</div>
+              </div>
+            </label>
+            <label class="flex items-start gap-3 p-4 rounded-lg border-2 border-gray-200 cursor-pointer smooth-transition hover:border-purple-300 code-option" data-code="72859387" data-name="Penis Throb Soft">
+              <input type="checkbox" class="custom-checkbox mt-1 w-5 h-5 rounded text-purple-600 focus:ring-purple-500" value="72859387">
+              <div class="flex-1">
+                <div class="font-semibold text-gray-800">Penis Throb Soft</div>
+                <div class="text-xs text-gray-500 font-mono">72859387</div>
+              </div>
+            </label>
+          </div>
+        </section>
+
+        <!-- 3. Endurance/Ejaculation -->
+        <section class="bg-white rounded-xl shadow-md border border-gray-100 p-5 sm:p-6 smooth-transition hover:shadow-lg">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-lg gradient-bg flex items-center justify-center text-white font-bold">3</div>
+            <h2 class="text-xl font-bold text-gray-800">Endurance / Ejaculation</h2>
+          </div>
+          <div id="endurance-container" class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <label class="flex items-start gap-3 p-4 rounded-lg border-2 border-gray-200 cursor-pointer smooth-transition hover:border-blue-300 code-option" data-code="7671875284" data-name="Penis Slow Ejaculation">
+              <input type="checkbox" class="custom-checkbox mt-1 w-5 h-5 rounded text-blue-600 focus:ring-blue-500" value="7671875284">
+              <div class="flex-1">
+                <div class="font-semibold text-gray-800">Penis Slow Ejaculation</div>
+                <div class="text-xs text-gray-500 font-mono">7671875284</div>
+              </div>
+            </label>
+            <label class="flex items-start gap-3 p-4 rounded-lg border-2 border-gray-200 cursor-pointer smooth-transition hover:border-blue-300 code-option" data-code="7674286293" data-name="Penis Ejaculation">
+              <input type="checkbox" class="custom-checkbox mt-1 w-5 h-5 rounded text-blue-600 focus:ring-blue-500" value="7674286293">
+              <div class="flex-1">
+                <div class="font-semibold text-gray-800">Penis Ejaculation</div>
+                <div class="text-xs text-gray-500 font-mono">7674286293</div>
+              </div>
+            </label>
+          </div>
+        </section>
+
+        <!-- 4. Squank Activation -->
+        <section class="bg-white rounded-xl shadow-md border border-gray-100 p-5 sm:p-6 smooth-transition hover:shadow-lg">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-lg gradient-bg flex items-center justify-center text-white font-bold">4</div>
+            <div>
+              <h2 class="text-xl font-bold text-gray-800">Squank Activation</h2>
+              <p class="text-xs text-gray-500">Activate in order: 1 → 2 → 10 → 21</p>
+            </div>
+          </div>
+          <div id="squank-container" class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+            <label class="flex flex-col items-center gap-2 p-4 rounded-lg border-2 border-gray-200 cursor-pointer smooth-transition hover:border-purple-300 code-option" data-code="7286984832" data-name="Squank 1">
+              <input type="checkbox" class="custom-checkbox w-5 h-5 rounded text-purple-600 focus:ring-purple-500" value="7286984832">
+              <div class="text-center">
+                <div class="font-bold text-gray-800">Squank 1</div>
+                <div class="text-[10px] text-gray-500 font-mono">7286984832</div>
+              </div>
+            </label>
+            <label class="flex flex-col items-center gap-2 p-4 rounded-lg border-2 border-gray-200 cursor-pointer smooth-transition hover:border-purple-300 code-option" data-code="7286984828" data-name="Squank 2">
+              <input type="checkbox" class="custom-checkbox w-5 h-5 rounded text-purple-600 focus:ring-purple-500" value="7286984828">
+              <div class="text-center">
+                <div class="font-bold text-gray-800">Squank 2</div>
+                <div class="text-[10px] text-gray-500 font-mono">7286984828</div>
+              </div>
+            </label>
+            <label class="flex flex-col items-center gap-2 p-4 rounded-lg border-2 border-gray-200 cursor-pointer smooth-transition hover:border-purple-300 code-option" data-code="789832108" data-name="Squank 10">
+              <input type="checkbox" class="custom-checkbox w-5 h-5 rounded text-purple-600 focus:ring-purple-500" value="789832108">
+              <div class="text-center">
+                <div class="font-bold text-gray-800">Squank 10</div>
+                <div class="text-[10px] text-gray-500 font-mono">789832108</div>
+              </div>
+            </label>
+            <label class="flex flex-col items-center gap-2 p-4 rounded-lg border-2 border-gray-200 cursor-pointer smooth-transition hover:border-purple-300 code-option" data-code="7872384890" data-name="Squank 21">
+              <input type="checkbox" class="custom-checkbox w-5 h-5 rounded text-purple-600 focus:ring-purple-500" value="7872384890">
+              <div class="text-center">
+                <div class="font-bold text-gray-800">Squank 21</div>
+                <div class="text-[10px] text-gray-500 font-mono">7872384890</div>
+              </div>
+            </label>
+          </div>
+        </section>
+      </div>
+
+      <!-- Sidebar: Summary & Compatibility -->
+      <div class="lg:col-span-1 space-y-6">
+        
+        <!-- Live Summary -->
+        <div class="sticky top-6">
+          <div class="bg-white rounded-xl shadow-lg border-2 gradient-border p-5 mb-6">
+            <div class="flex items-center justify-between mb-4">
+              <h3 class="text-lg font-bold flex items-center gap-2">
+                <svg class="w-5 h-5 text-purple-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                Live Summary
+              </h3>
+              <span id="selected-count" class="text-xs font-bold px-2 py-1 rounded-full bg-purple-100 text-purple-700">0 selected</span>
+            </div>
+            <div id="summary-box" class="min-h-[120px] rounded-lg p-4 border-2 border-dashed border-gray-200 bg-gray-50">
+              <p class="text-sm text-gray-500 text-center py-8">Select codes to see configuration</p>
+            </div>
+            <div class="flex gap-2 mt-4">
+              <button id="copy-btn" class="btn-primary flex-1 px-4 py-2.5 rounded-lg font-semibold text-sm smooth-transition flex items-center justify-center gap-2">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                Copy JSON
+              </button>
+              <button id="reset-btn" class="btn-secondary px-4 py-2.5 rounded-lg font-semibold text-sm smooth-transition">
+                Reset
+              </button>
+            </div>
+            <div id="copy-feedback" class="text-xs text-green-600 font-medium text-center mt-2 h-4"></div>
+          </div>
+
+          <!-- Compatibility Notes Panel -->
+          <div class="bg-white rounded-xl shadow-md border border-gray-100 p-5">
+            <h3 class="text-lg font-bold mb-3 flex items-center gap-2">
+              <svg class="w-5 h-5 text-blue-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
+              Compatibility Notes
+            </h3>
+            <p class="text-xs text-gray-600 mb-3">Reference: Best pairing vagina codes from document</p>
+            <div class="space-y-2">
+              <div class="p-3 rounded-lg bg-blue-50 border border-blue-100">
+                <div class="font-semibold text-blue-900 text-sm">Vagina Rim Hold 1</div>
+                <div class="text-xs text-blue-700 font-mono">7284380892</div>
+                <div class="text-xs text-gray-600 mt-1">Pairs with: Penis Tight, Throb sequences</div>
+              </div>
+              <div class="p-3 rounded-lg bg-purple-50 border border-purple-100">
+                <div class="font-semibold text-purple-900 text-sm">Vagina Tight Hold True</div>
+                <div class="text-xs text-purple-700 font-mono">728518374</div>
+                <div class="text-xs text-gray-600 mt-1">Pairs with: Squank 1,2,10,21 activation</div>
+              </div>
+              <div class="p-3 rounded-lg bg-indigo-50 border border-indigo-100">
+                <div class="font-semibold text-indigo-900 text-sm">Vagina Holding Cock</div>
+                <div class="text-xs text-indigo-700 font-mono">7298963841</div>
+                <div class="text-xs text-gray-600 mt-1">Pairs with: Penis Throb in Pussy Hard</div>
+              </div>
+            </div>
+            <div id="compatibility-match" class="mt-4 p-3 rounded-lg bg-green-50 border-2 border-green-200 hidden fade-in">
+              <div class="text-xs font-bold text-green-800 mb-1">✓ DETECTED PAIRING</div>
+              <div id="match-text" class="text-xs text-green-700"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="mt-12 text-center text-xs text-gray-400 pb-6">
+      <p>Based on "Detailed Analysis of the Ultimate Best Penis and Vagina Fit for Women" | Educational Reference Only</p>
+    </footer>
+  </div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const state = {
+    tightness: null,
+    throbbing: [],
+    endurance: [],
+    squank: []
+  };
+
+  const allInputs = document.querySelectorAll('input[type="radio"], input[type="checkbox"]');
+  const summaryBox = document.getElementById('summary-box');
+  const selectedCount = document.getElementById('selected-count');
+  const copyBtn = document.getElementById('copy-btn');
+  const resetBtn = document.getElementById('reset-btn');
+  const copyFeedback = document.getElementById('copy-feedback');
+  const compatibilityMatch = document.getElementById('compatibility-match');
+  const matchText = document.getElementById('match-text');
+
+  function updateState() {
+    // Tightness
+    const tightnessRadio = document.querySelector('input[name="tightness"]:checked');
+    state.tightness = tightnessRadio ? { code: tightnessRadio.value, name: 'Penis Tight' } : null;
+
+    // Throbbing
+    state.throbbing = Array.from(document.querySelectorAll('#throbbing-container input:checked')).map(cb => ({
+      code: cb.value,
+      name: cb.closest('.code-option').dataset.name
+    }));
+
+    // Endurance
+    state.endurance = Array.from(document.querySelectorAll('#endurance-container input:checked')).map(cb => ({
+      code: cb.value,
+      name: cb.closest('.code-option').dataset.name
+    }));
+
+    // Squank
+    state.squank = Array.from(document.querySelectorAll('#squank-container input:checked')).map(cb => ({
+      code: cb.value,
+      name: cb.closest('.code-option').dataset.name
+    }));
+
+    updateUI();
+    checkCompatibility();
+  }
+
+  function updateUI() {
+    const allSelected = [
+      ...(state.tightness ? [state.tightness] : []),
+      ...state.throbbing,
+      ...state.endurance,
+      ...state.squank
+    ];
+
+    selectedCount.textContent = `${allSelected.length} selected`;
+
+    // Update card highlights
+    document.querySelectorAll('.code-option').forEach(card => {
+      const input = card.querySelector('input');
+      if (input.checked) {
+        card.classList.add('selected-card');
+      } else {
+        card.classList.remove('selected-card');
+      }
+    });
+
+    // Update summary
+    if (allSelected.length === 0) {
+      summaryBox.innerHTML = '<p class="text-sm text-gray-500 text-center py-8">Select codes to see configuration</p>';
+      summaryBox.classList.remove('bg-green-50', 'border-green-300');
+      summaryBox.classList.add('border-dashed', 'border-gray-200', 'bg-gray-50');
+    } else {
+      summaryBox.classList.remove('border-dashed', 'border-gray-200', 'bg-gray-50');
+      summaryBox.classList.add('bg-green-50', 'border-green-300');
+      
+      let html = '<div class="space-y-2 fade-in">';
+      html += '<div class="text-xs font-bold text-green-800 mb-2">ACTIVE CONFIGURATION</div>';
+      
+      if (state.tightness) {
+        html += `<div class="text-xs"><span class="font-semibold text-gray-700">Tightness:</span> <span class="font-mono text-green-900">${state.tightness.name}</span></div>`;
+      }
+      if (state.throbbing.length) {
+        html += `<div class="text-xs"><span class="font-semibold text-gray-700">Throbbing:</span> <span class="font-mono text-green-900">${state.throbbing.map(t => t.name).join(', ')}</span></div>`;
+      }
+      if (state.endurance.length) {
+        html += `<div class="text-xs"><span class="font-semibold text-gray-700">Endurance:</span> <span class="font-mono text-green-900">${state.endurance.map(e => e.name).join(', ')}</span></div>`;
+      }
+      if (state.squank.length) {
+        html += `<div class="text-xs"><span class="font-semibold text-gray-700">Squank:</span> <span class="font-mono text-green-900">${state.squank.map(s => s.name).join(' → ')}</span></div>`;
+      }
+      
+      html += '</div>';
+      summaryBox.innerHTML = html;
+    }
+  }
+
+  function checkCompatibility() {
+    const matches = [];
+    
+    // Check for Vagina Rim Hold 1 pairing
+    if (state.tightness || state.throbbing.length > 0) {
+      matches.push('Vagina Rim Hold 1: 7284380892 - Compatible with tight/throb configuration');
+    }
+    
+    // Check for Vagina Tight Hold True pairing
+    if (state.squank.length > 0) {
+      matches.push('Vagina Tight Hold True: 728518374 - Enhanced by Squank activation sequence');
+    }
+    
+    // Check for Vagina Holding Cock pairing
+    if (state.throbbing.some(t => t.code === '76779838687')) {
+      matches.push('Vagina Holding Cock: 7298963841 - Optimal pair for Throb in Pussy Hard');
+    }
+
+    if (matches.length > 0) {
+      compatibilityMatch.classList.remove('hidden');
+      matchText.innerHTML = matches.join('<br>');
+    } else {
+      compatibilityMatch.classList.add('hidden');
+    }
+  }
+
+  function getExportData() {
+    return {
+      document_reference: "Detailed Analysis of the Ultimate Best Penis and Vagina Fit for Women",
+      selector_version: "Men - Penis Only",
+      timestamp: new Date().toISOString(),
+      configuration: {
+        tightness: state.tightness,
+        throbbing_controls: state.throbbing,
+        endurance_ejaculation: state.endurance,
+        squank_activation: state.squank
+      },
+      total_codes_selected: (state.tightness ? 1 : 0) + state.throbbing.length + state.endurance.length + state.squank.length
+    };
+  }
+
+  copyBtn.addEventListener('click', async function() {
+    const data = getExportData();
+    const json = JSON.stringify(data, null, 2);
+    
+    try {
+      await navigator.clipboard.writeText(json);
+      copyFeedback.textContent = '✓ Configuration copied to clipboard!';
+      copyFeedback.classList.add('text-green-600');
+      setTimeout(() => {
+        copyFeedback.textContent = '';
+      }, 2500);
+    } catch (err) {
+      copyFeedback.textContent = 'Copy failed - check console';
+      copyFeedback.classList.remove('text-green-600');
+      copyFeedback.classList.add('text-red-600');
+      console.log('Export JSON:', json);
+    }
+  });
+
+  resetBtn.addEventListener('click', function() {
+    allInputs.forEach(input => input.checked = false);
+    updateState();
+    copyFeedback.textContent = 'Reset complete';
+    setTimeout(() => {
+      copyFeedback.textContent = '';
+    }, 1500);
+  });
+
+  allInputs.forEach(input => {
+    input.addEventListener('change', updateState);
+  });
+
+  // Initial render
+  updateState();
+});
+</script>
+</body>
+</html>
